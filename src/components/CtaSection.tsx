@@ -839,32 +839,73 @@ export default function CtaSection() {
 </DialogContent>
       </Dialog>
 
-      {toast && (
-        <div className="fixed inset-0 z-[999999] flex items-center justify-center bg-black/70 pointer-events-auto">
+{toast && (
+  <div className="fixed inset-0 z-[999999] flex items-center justify-center bg-black/70 pointer-events-auto">
+    <div className="pointer-events-auto rounded-2xl border border-emerald-500/20 bg-zinc-950 p-6 text-center shadow-2xl">
 
-          <div className="pointer-events-auto rounded-2xl border border-emerald-500/20 bg-zinc-950 p-6 text-center shadow-2xl">
+      <p className="mb-3 text-lg font-bold text-emerald-400">
+        Aviso
+      </p>
 
-            <p className="mb-3 text-lg font-bold text-emerald-400">
-              Aviso
-            </p>
+      <p className="text-white">
+        {toast}
+      </p>
 
-            <p className="text-white">
-              {toast}
-            </p>
+      <button
+        type="button"
+        onClick={() => setToast(null)}
+        className="mt-5 rounded-xl bg-emerald-500 px-6 py-2 font-bold text-black transition hover:brightness-110"
+      >
+        OK
+      </button>
 
-            <button
-              type="button"
-              onClick={() => setToast(null)}
-              className="mt-5 rounded-xl bg-emerald-500 px-6 py-2 font-bold text-black transition hover:brightness-110"
-            >
-              OK
-            </button>
+    </div>
+  </div>
+)}
 
-          </div>
+{/* 🔥 RED CONFIMEX FIJO */}
+<div className="mt-16 flex justify-center">
+  <div className="w-full max-w-xl rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-8 shadow-xl backdrop-blur">
 
-        </div>
-      )}
+    {/* 🔴 BOTÓN SALIR ARRIBA */}
+    <div className="flex justify-end">
+      <button
+        type="button"
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        className="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition"
+      >
+        ← Salir y regresar al inicio
+      </button>
+    </div>
 
-    </section>
+    <h3 className="text-2xl font-extrabold text-emerald-400 mt-2">
+      RED CONFIMEX
+    </h3>
+
+    <p className="mt-3 text-sm text-navy-foreground/70">
+      Conecta con talleres, maquileros, proveedores y empresas del sector textil.
+    </p>
+
+    <div className="mt-6 flex flex-col gap-3">
+
+      <button
+        type="button"
+        onClick={() => {
+          window.location.href = "/red-confimex";
+        }}
+        className="rounded-xl bg-emerald-500 px-6 py-3 font-bold text-black transition hover:brightness-110"
+      >
+        Entrar a la Red
+      </button>
+
+    </div>
+
+  </div>
+</div>
+</section>
   );
 }
+
+

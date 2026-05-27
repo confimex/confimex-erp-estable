@@ -45,7 +45,7 @@ if (botonTidio) {
      <div className="flex flex-col items-center justify-center text-center">
 
         <p className="text-xs font-medium text-black/70">
-          ¿Necesitas ayuda?
+          Después del diagnóstico
         </p>
 
         <p className="text-sm font-black text-black">
