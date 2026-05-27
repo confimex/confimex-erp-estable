@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
-export const Route = createFileRoute("/red-confimex")({
+export const Route = createFileRoute("/red_confimex")({
   head: () => ({
     meta: [
       {
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/red-confimex")({
       },
       {
         rel: "canonical",
-        href: "/red-confimex",
+        href: "/red_confimex",
       } as any,
     ],
   }),

@@ -893,7 +893,7 @@ export default function CtaSection() {
       <button
         type="button"
         onClick={() => {
-          window.location.href = "/red-confimex";
+          window.location.href = "/red_confimex";
         }}
         className="rounded-xl bg-emerald-500 px-6 py-3 font-bold text-black transition hover:brightness-110"
       >

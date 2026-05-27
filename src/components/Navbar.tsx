@@ -119,7 +119,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              to="/red-confimex"
+              to="/red_confimex"
               onClick={() => setOpen(false)}
               className="text-navy-foreground/70 hover:text-brand"
             >

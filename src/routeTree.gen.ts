@@ -11,7 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TestimoniosRouteImport } from './routes/testimonios'
 import { Route as ServiciosRouteImport } from './routes/servicios'
-import { Route as RedConfimexRouteImport } from './routes/red-confimex'
+import { Route as Red_confimexRouteImport } from './routes/red_confimex'
 import { Route as QuienesSomosRouteImport } from './routes/quienes-somos'
 import { Route as ErpRouteImport } from './routes/erp'
 import { Route as IndexRouteImport } from './routes/index'
@@ -26,9 +26,9 @@ const ServiciosRoute = ServiciosRouteImport.update({
   path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RedConfimexRoute = RedConfimexRouteImport.update({
-  id: '/red-confimex',
-  path: '/red-confimex',
+const Red_confimexRoute = Red_confimexRouteImport.update({
+  id: '/red_confimex',
+  path: '/red_confimex',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuienesSomosRoute = QuienesSomosRouteImport.update({
@@ -51,7 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/erp': typeof ErpRoute
   '/quienes-somos': typeof QuienesSomosRoute
-  '/red-confimex': typeof RedConfimexRoute
+  '/red_confimex': typeof Red_confimexRoute
   '/servicios': typeof ServiciosRoute
   '/testimonios': typeof TestimoniosRoute
 }
@@ -59,7 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/erp': typeof ErpRoute
   '/quienes-somos': typeof QuienesSomosRoute
-  '/red-confimex': typeof RedConfimexRoute
+  '/red_confimex': typeof Red_confimexRoute
   '/servicios': typeof ServiciosRoute
   '/testimonios': typeof TestimoniosRoute
 }
@@ -68,7 +68,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/erp': typeof ErpRoute
   '/quienes-somos': typeof QuienesSomosRoute
-  '/red-confimex': typeof RedConfimexRoute
+  '/red_confimex': typeof Red_confimexRoute
   '/servicios': typeof ServiciosRoute
   '/testimonios': typeof TestimoniosRoute
 }
@@ -78,7 +78,7 @@ export interface FileRouteTypes {
     | '/'
     | '/erp'
     | '/quienes-somos'
-    | '/red-confimex'
+    | '/red_confimex'
     | '/servicios'
     | '/testimonios'
   fileRoutesByTo: FileRoutesByTo
@@ -86,7 +86,7 @@ export interface FileRouteTypes {
     | '/'
     | '/erp'
     | '/quienes-somos'
-    | '/red-confimex'
+    | '/red_confimex'
     | '/servicios'
     | '/testimonios'
   id:
@@ -94,7 +94,7 @@ export interface FileRouteTypes {
     | '/'
     | '/erp'
     | '/quienes-somos'
-    | '/red-confimex'
+    | '/red_confimex'
     | '/servicios'
     | '/testimonios'
   fileRoutesById: FileRoutesById
@@ -103,7 +103,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ErpRoute: typeof ErpRoute
   QuienesSomosRoute: typeof QuienesSomosRoute
-  RedConfimexRoute: typeof RedConfimexRoute
+  Red_confimexRoute: typeof Red_confimexRoute
   ServiciosRoute: typeof ServiciosRoute
   TestimoniosRoute: typeof TestimoniosRoute
 }
@@ -124,11 +124,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/red-confimex': {
-      id: '/red-confimex'
-      path: '/red-confimex'
-      fullPath: '/red-confimex'
-      preLoaderRoute: typeof RedConfimexRouteImport
+    '/red_confimex': {
+      id: '/red_confimex'
+      path: '/red_confimex'
+      fullPath: '/red_confimex'
+      preLoaderRoute: typeof Red_confimexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quienes-somos': {
@@ -159,7 +159,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ErpRoute: ErpRoute,
   QuienesSomosRoute: QuienesSomosRoute,
-  RedConfimexRoute: RedConfimexRoute,
+  Red_confimexRoute: Red_confimexRoute,
   ServiciosRoute: ServiciosRoute,
   TestimoniosRoute: TestimoniosRoute,
 }

@@ -19,7 +19,7 @@ export default function RedConfimexBanner() {
         </p>
 
         <Link
-          to="/red-confimex"
+          to="/red_confimex"
           className="mt-8 inline-flex rounded-2xl bg-emerald-500 px-8 py-4 text-lg font-black text-black transition hover:scale-105 hover:bg-emerald-400"
         >
           EXPLORAR RED CONFIMEX
