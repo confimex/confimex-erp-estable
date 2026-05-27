@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import AdminProspectos from "@/pages/AdminProspectos";
 import AdminRed from "@/components/AdminRed";
 
-export default function erp() {
+export default function ERP() {
 
   const [pass, setPass] = useState("");
 
@@ -46,6 +46,8 @@ export default function erp() {
         "true"
       );
 
+      setPass("");
+
     } else {
 
       alert(
@@ -60,13 +62,17 @@ export default function erp() {
 
   const handleLogout = () => {
 
-    setAutorizado(false);
+  setAutorizado(false);
 
-    localStorage.removeItem(
-      "erp-auth"
-    );
+  setPass("");
 
-  };
+  localStorage.removeItem(
+    "erp-auth"
+  );
+
+  window.location.href = "/";
+
+};
 
   /* ---------------- LOGIN SCREEN ---------------- */
 
@@ -91,6 +97,11 @@ export default function erp() {
                 e.target.value
               )
             }
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleLogin();
+              }
+            }}
             className="w-full rounded-xl border border-white/20 bg-black p-3 outline-none focus:border-emerald-500"
           />
 
